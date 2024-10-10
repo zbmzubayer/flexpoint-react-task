@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #b78deb;
+
+    --free-plan-primary: #4cb3fd;
+    --free-plan-secondary: #e5f2ff;
+    --free-plan-dark: #1884d1;
+
+    --basic-plan-primary: #ffb72c;
+    --basic-plan-secondary: #fff0d9;
+    --basic-plan-dark: #d69312;
+
+    --pro-plan-primary: #68cb9b;
+    --pro-plan-secondary: #d8fdf0;
+    --pro-plan-dark: #40a373;
+
+    --growth-plan-primary: #b78deb;
+    --growth-plan-secondary: #f7f5fb;
+    --growth-plan-dark: #6e41a6;
+
+    --muted-light: #83a1b7;
+    --muted-dark: #49687e;
+  }
+}
+
+.btn-free:hover {
+  background-color: var(--free-plan-dark) !important;
+}
+.btn-basic:hover {
+  background-color: var(--basic-plan-dark) !important;
+}
+.btn-pro:hover {
+  background-color: var(--pro-plan-dark) !important;
+}
+.btn-growth:hover {
+  background-color: var(--growth-plan-dark) !important;
+}
