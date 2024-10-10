@@ -118,10 +118,16 @@ export default function PlanCard({ type, plans, features }: PlanCardProps) {
           <div className="py-2 font-medium">{subtitle}</div>
           <ul className="text-sm leading-[14px]">
             {name !== "Free" && (
-              <div
-                className="cursor-pointer py-2.5 [&_strong]:font-normal"
-                dangerouslySetInnerHTML={{ __html: title }}
-              />
+              <Tooltip
+                className="w-full"
+                tooltipContent={text}
+                arrowPosition="start"
+              >
+                <div
+                  className="cursor-pointer py-2.5 [&_strong]:font-normal"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+              </Tooltip>
             )}
             {features.map((feature, index) => (
               <FeatureList key={index} feature={feature} planName={name} />
